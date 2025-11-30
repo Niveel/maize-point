@@ -1,0 +1,50 @@
+INFO 2025-11-30 06:24:04,528 signals Registration email sent to john_doe@example.com
+INFO 2025-11-30 06:24:04,538 signals Customer profile created for user john_doe
+INFO 2025-11-30 06:24:05,008 signals Registration email sent to jane_smith@example.com
+INFO 2025-11-30 06:24:05,018 signals Customer profile created for user jane_smith
+INFO 2025-11-30 06:24:05,478 signals Registration email sent to kofi_mensah@example.com
+INFO 2025-11-30 06:24:05,488 signals Customer profile created for user kofi_mensah
+INFO 2025-11-30 06:24:05,518 signals New current price set for Yellow Maize - 50kg bag
+INFO 2025-11-30 06:24:05,527 signals New current price set for Yellow Maize - 100kg bag
+INFO 2025-11-30 06:24:05,538 signals New current price set for White Maize - 50kg bag
+INFO 2025-11-30 06:24:05,552 signals New current price set for White Maize - 100kg bag
+INFO 2025-11-30 06:24:05,568 signals New current price set for Mixed Maize - 50kg bag
+INFO 2025-11-30 06:24:05,577 signals New current price set for Mixed Maize - 100kg bag
+INFO 2025-11-30 06:24:19,428 autoreload Watching for file changes with StatReloader
+INFO 2025-11-30 06:36:04,476 autoreload Watching for file changes with StatReloader
+INFO 2025-11-30 06:36:22,340 basehttp "GET /admin HTTP/1.1" 301 0
+INFO 2025-11-30 06:36:22,386 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-30 06:36:22,573 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4198
+INFO 2025-11-30 06:36:22,743 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+INFO 2025-11-30 06:36:22,744 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+INFO 2025-11-30 06:36:22,758 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2025-11-30 06:36:22,759 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+INFO 2025-11-30 06:36:22,773 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+INFO 2025-11-30 06:36:22,789 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2025-11-30 06:36:22,805 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+WARNING 2025-11-30 06:36:22,846 log Not Found: /favicon.ico
+WARNING 2025-11-30 06:36:22,847 basehttp "GET /favicon.ico HTTP/1.1" 404 3640
+INFO 2025-11-30 06:37:12,459 autoreload Watching for file changes with StatReloader
+INFO 2025-11-30 06:37:36,352 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4359
+INFO 2025-11-30 06:38:33,600 signals Registration email sent to eritten@gmail.com
+INFO 2025-11-30 06:38:33,609 signals Customer profile created for user eritten
+INFO 2025-11-30 06:38:50,979 autoreload Watching for file changes with StatReloader
+INFO 2025-11-30 06:39:03,566 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-11-30 06:39:03,676 basehttp "GET /admin/ HTTP/1.1" 200 11390
+INFO 2025-11-30 06:39:03,830 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-11-30 06:39:03,853 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-11-30 06:39:03,859 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-11-30 06:39:39,767 basehttp "GET /admin/farmers/farmersupply/ HTTP/1.1" 200 13611
+INFO 2025-11-30 06:39:39,807 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2025-11-30 06:39:39,813 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2025-11-30 06:39:39,833 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-11-30 06:39:39,857 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2025-11-30 06:39:39,870 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+INFO 2025-11-30 06:39:39,895 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2025-11-30 06:39:39,899 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-11-30 06:39:39,912 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2025-11-30 06:39:39,922 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-11-30 06:39:39,932 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-11-30 06:39:39,954 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-11-30 06:39:39,992 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2025-11-30 06:39:40,027 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331

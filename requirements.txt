@@ -1,0 +1,40 @@
+# Django Core
+Django>=4.2,<5.0
+python-decouple==3.8
+
+# Django REST Framework
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.3.1
+
+# CORS Headers
+django-cors-headers==4.3.1
+
+# Filtering and Search
+django-filter==23.5
+
+# Image Processing
+Pillow==10.2.0
+
+# Database
+psycopg2-binary==2.9.9
+
+# API Documentation
+drf-spectacular==0.27.1
+
+# Phone Number Validation
+django-phonenumber-field==7.3.0
+phonenumbers==8.13.29
+
+# Async Tasks
+celery==5.3.6
+redis==5.0.1
+
+# Email
+django-anymail==10.2
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Development
+ipython==8.20.0

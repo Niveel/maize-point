@@ -48,3 +48,14 @@ INFO 2025-11-30 06:39:39,932 basehttp "GET /static/admin/img/search.svg HTTP/1.1
 INFO 2025-11-30 06:39:39,954 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
 INFO 2025-11-30 06:39:39,992 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
 INFO 2025-11-30 06:39:40,027 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-03-15 21:12:43,750 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-15 21:13:35,257 log Not Found: /
+WARNING 2026-03-15 21:13:35,259 log "GET / HTTP/1.1" 404 179
+WARNING 2026-03-15 21:13:35,497 log Not Found: /favicon.ico
+WARNING 2026-03-15 21:13:35,498 log "GET /favicon.ico HTTP/1.1" 404 179
+INFO 2026-03-15 22:51:22,539 autoreload C:\Users\Good\Desktop\backend\maize-point\maize_point\settings.py changed, reloading.
+INFO 2026-03-15 22:51:26,519 autoreload Watching for file changes with StatReloader
+WARNING 2026-03-15 23:27:58,826 log Bad Request: /api/products/
+WARNING 2026-03-15 23:27:58,829 log Bad Request: /api/products/
+WARNING 2026-03-15 23:27:58,831 log Bad Request: /api/products/
+WARNING 2026-03-15 23:27:58,833 log Bad Request: /api/products/

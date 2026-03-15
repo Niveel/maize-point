@@ -6,6 +6,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
+from products.views import ProductCategoryListViewSet
 
 urlpatterns = [
     # Admin
@@ -25,6 +26,12 @@ urlpatterns = [
     path('api/inventory/', include('inventory.urls')),
     path('api/orders/', include('orders.urls')),
     path('api/blog/', include('blog.urls')),
+    path('api/home/', include('homepage.urls')),
+    path(
+        "api/product-categories/",
+        ProductCategoryListViewSet.as_view({"get": "list"}),
+        name="product-categories",
+    ),
 ]
 
 # Serve media files in development

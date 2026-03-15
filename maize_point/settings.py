@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "orders.apps.OrdersConfig",
     "blog.apps.BlogConfig",
     "notifications.apps.NotificationsConfig",
+    "homepage.apps.HomepageConfig",
 ]
 
 MIDDLEWARE = [

@@ -19,6 +19,7 @@ class Price(models.Model):
         ordering = ['-effective_date']
         indexes = [
             models.Index(fields=['product', 'is_current']),
+            models.Index(fields=['product', 'is_current', 'price_per_ton']),
             models.Index(fields=['effective_date']),
         ]
         unique_together = [['product', 'packaging_size', 'is_current']]

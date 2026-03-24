@@ -80,3 +80,180 @@ INFO 2026-03-24 14:07:29,766 log "GET /api/auth/me/ HTTP/1.1" 200 296
 INFO 2026-03-24 14:08:51,600 log "GET /api/auth/me/ HTTP/1.1" 200 296
 INFO 2026-03-24 14:08:51,616 log "GET /api/auth/me/ HTTP/1.1" 200 296
 INFO 2026-03-24 14:09:10,564 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:15:18,971 basehttp - Broken pipe from ('127.0.0.1', 49637)
+INFO 2026-03-24 14:15:18,983 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:15:18,984 basehttp - Broken pipe from ('127.0.0.1', 53505)
+INFO 2026-03-24 14:15:45,965 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:15:46,081 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:15:46,098 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:16:21,342 basehttp - Broken pipe from ('127.0.0.1', 50385)
+INFO 2026-03-24 14:16:21,353 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:16:45,758 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:16:45,829 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:16:45,950 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:16:46,097 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:16:46,170 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:16:46,175 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:16:46,405 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:16:46,494 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:17:57,365 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:17:57,367 basehttp - Broken pipe from ('127.0.0.1', 50842)
+INFO 2026-03-24 14:19:36,749 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:19:36,822 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:19:36,837 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:19:36,968 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:19:36,993 basehttp - Broken pipe from ('127.0.0.1', 50742)
+INFO 2026-03-24 14:19:37,001 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:19:37,116 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:19:46,542 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=12 HTTP/1.1" 200 4090
+INFO 2026-03-24 14:19:46,684 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=12 HTTP/1.1" 200 4090
+INFO 2026-03-24 14:19:56,559 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:19:56,641 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=4 HTTP/1.1" 200 1856
+INFO 2026-03-24 14:19:58,982 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=2&page_size=4 HTTP/1.1" 200 1871
+INFO 2026-03-24 14:19:59,064 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=2&page_size=4 HTTP/1.1" 200 1871
+INFO 2026-03-24 14:20:03,739 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=12 HTTP/1.1" 200 4090
+INFO 2026-03-24 14:20:03,949 log "GET /api/products/?availability=AVAILABLE&sort=featured&page=1&page_size=12 HTTP/1.1" 200 4090
+INFO 2026-03-24 14:20:11,618 log "GET /api/products/?sort=featured&page=1&page_size=4 HTTP/1.1" 200 1833
+INFO 2026-03-24 14:20:11,710 log "GET /api/products/?sort=featured&page=1&page_size=4 HTTP/1.1" 200 1833
+INFO 2026-03-24 14:21:28,518 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:21:28,547 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:21:28,579 log "GET /api/products/?sort=featured&page=1&page_size=4 HTTP/1.1" 200 1833
+INFO 2026-03-24 14:21:28,667 log "GET /api/products/?sort=featured&page=1&page_size=4 HTTP/1.1" 200 1833
+INFO 2026-03-24 14:21:28,792 log "GET /api/products/?sort=featured&page=1&page_size=4 HTTP/1.1" 200 1833
+INFO 2026-03-24 14:21:28,951 log "GET /api/products/?sort=featured&page=1&page_size=4 HTTP/1.1" 200 1833
+INFO 2026-03-24 14:27:50,417 log "GET /api/auth/me/ HTTP/1.1" 200 296
+WARNING 2026-03-24 14:27:50,605 log Not Found: /api/products/maize-grits-coarse/
+WARNING 2026-03-24 14:27:50,609 log Not Found: /api/products/maize-grits-coarse/
+INFO 2026-03-24 14:27:50,621 basehttp - Broken pipe from ('127.0.0.1', 51712)
+INFO 2026-03-24 14:27:50,622 basehttp - Broken pipe from ('127.0.0.1', 50572)
+WARNING 2026-03-24 14:27:50,642 log "GET /api/products/maize-grits-coarse/ HTTP/1.1" 404 69
+INFO 2026-03-24 14:27:50,645 basehttp - Broken pipe from ('127.0.0.1', 51516)
+INFO 2026-03-24 14:27:50,768 basehttp - Broken pipe from ('127.0.0.1', 57006)
+INFO 2026-03-24 14:27:50,880 log "GET /api/products/?page=1&page_size=100 HTTP/1.1" 200 5379
+INFO 2026-03-24 14:27:50,984 log "GET /api/products/?category=processed&page=1&page_size=4 HTTP/1.1" 200 1837
+INFO 2026-03-24 14:28:22,745 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:24,631 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:26,922 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:26,939 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:26,965 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:26,984 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:27,029 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:30,871 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:31,122 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:32,707 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:32,728 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:32,803 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:32,827 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:28:32,872 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:36:01,134 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:36:01,163 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:36:01,184 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:36:01,372 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:36:01,388 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:36:01,404 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:38:48,314 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:38:48,368 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:38:48,831 log "GET /api/products/?page=1&page_size=100 HTTP/1.1" 200 5379
+INFO 2026-03-24 14:38:48,837 basehttp - Broken pipe from ('127.0.0.1', 58667)
+INFO 2026-03-24 14:39:19,357 log "OPTIONS /api/orders/ HTTP/1.1" 200 0
+WARNING 2026-03-24 14:39:19,389 log Bad Request: /api/orders/
+WARNING 2026-03-24 14:39:19,390 log "POST /api/orders/ HTTP/1.1" 400 88
+INFO 2026-03-24 14:42:04,413 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:42:04,540 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:42:04,569 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:42:04,624 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:42:04,649 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:42:04,685 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:42:08,320 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:42:08,388 basehttp - Broken pipe from ('127.0.0.1', 52483)
+INFO 2026-03-24 14:42:08,497 log "GET /api/product-categories/ HTTP/1.1" 200 400
+INFO 2026-03-24 14:42:08,755 basehttp - Broken pipe from ('127.0.0.1', 49637)
+INFO 2026-03-24 14:42:08,762 log "GET /api/products/?sort=featured&page=1&page_size=12 HTTP/1.1" 200 5010
+INFO 2026-03-24 14:42:08,965 log "GET /api/products/?sort=featured&page=1&page_size=12 HTTP/1.1" 200 5010
+INFO 2026-03-24 14:43:26,552 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:45:03,843 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:45:03,857 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:45:12,640 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:45:12,656 log "GET /api/auth/me/ HTTP/1.1" 200 296
+WARNING 2026-03-24 14:56:30,123 log Unauthorized: /api/auth/me/
+WARNING 2026-03-24 14:56:30,126 log "GET /api/auth/me/ HTTP/1.1" 401 99
+INFO 2026-03-24 14:56:30,248 log "OPTIONS /api/auth/refresh/ HTTP/1.1" 200 0
+INFO 2026-03-24 14:56:30,268 log "POST /api/auth/refresh/ HTTP/1.1" 200 489
+INFO 2026-03-24 14:56:30,357 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:56:30,764 log "OPTIONS /api/customers/me/ HTTP/1.1" 200 0
+INFO 2026-03-24 14:56:30,808 log "GET /api/customers/me/ HTTP/1.1" 200 567
+INFO 2026-03-24 14:56:30,819 log "OPTIONS /api/orders/history/ HTTP/1.1" 200 0
+INFO 2026-03-24 14:56:30,852 log "GET /api/home/hero-metrics/ HTTP/1.1" 200 138
+INFO 2026-03-24 14:56:30,887 log "GET /api/orders/history/ HTTP/1.1" 200 2
+INFO 2026-03-24 14:56:30,890 log "GET /api/home/announcements-preview/?limit=3 HTTP/1.1" 200 1097
+INFO 2026-03-24 14:56:30,932 log "GET /api/home/hero-metrics/ HTTP/1.1" 200 138
+INFO 2026-03-24 14:56:30,958 log "GET /api/customers/me/ HTTP/1.1" 200 567
+INFO 2026-03-24 14:56:30,965 log "GET /api/orders/history/ HTTP/1.1" 200 2
+INFO 2026-03-24 14:56:30,975 log "GET /api/home/announcements-preview/?limit=3 HTTP/1.1" 200 1097
+INFO 2026-03-24 14:58:46,194 log "GET /api/products/?page=1&page_size=100 HTTP/1.1" 200 5379
+INFO 2026-03-24 14:58:46,785 basehttp - Broken pipe from ('127.0.0.1', 63404)
+INFO 2026-03-24 15:01:57,750 log "OPTIONS /api/orders/?page=1&ordering=-created_at HTTP/1.1" 200 0
+INFO 2026-03-24 15:01:57,847 log "GET /api/orders/?page=1&ordering=-created_at HTTP/1.1" 200 52
+INFO 2026-03-24 15:01:57,850 log "GET /api/orders/history/ HTTP/1.1" 200 2
+INFO 2026-03-24 15:01:59,752 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 15:02:00,257 log "GET /api/orders/?page=1&ordering=-created_at HTTP/1.1" 200 52
+INFO 2026-03-24 15:02:00,267 log "GET /api/orders/history/ HTTP/1.1" 200 2
+INFO 2026-03-24 15:02:00,340 log "GET /api/orders/?page=1&ordering=-created_at HTTP/1.1" 200 52
+INFO 2026-03-24 15:02:00,344 log "GET /api/orders/history/ HTTP/1.1" 200 2
+INFO 2026-03-24 15:06:40,318 log "OPTIONS /api/orders/?page=1&page_size=100&ordering=-created_at HTTP/1.1" 200 0
+INFO 2026-03-24 15:06:40,382 log "GET /api/orders/?page=1&page_size=100&ordering=-created_at HTTP/1.1" 200 52
+INFO 2026-03-24 15:18:24,375 log "OPTIONS /api/customers/me/profile/ HTTP/1.1" 200 0
+WARNING 2026-03-24 15:18:24,534 log Not Found: /api/customers/me/profile/
+WARNING 2026-03-24 15:18:24,537 log "GET /api/customers/me/profile/ HTTP/1.1" 404 179
+INFO 2026-03-24 15:18:24,592 log "OPTIONS /api/profile/settings/ HTTP/1.1" 200 0
+WARNING 2026-03-24 15:18:24,601 log Not Found: /api/profile/settings/
+WARNING 2026-03-24 15:18:24,603 log "GET /api/profile/settings/ HTTP/1.1" 404 179
+INFO 2026-03-24 15:18:24,634 log "OPTIONS /api/profile/ HTTP/1.1" 200 0
+WARNING 2026-03-24 15:18:24,640 log Not Found: /api/profile/
+WARNING 2026-03-24 15:18:24,641 log "GET /api/profile/ HTTP/1.1" 404 179
+INFO 2026-03-24 15:18:24,702 log "GET /api/customers/me/ HTTP/1.1" 200 567
+INFO 2026-03-24 15:18:24,728 log "OPTIONS /api/customers/me/notification-preferences/ HTTP/1.1" 200 0
+WARNING 2026-03-24 15:18:24,741 log Not Found: /api/customers/me/notification-preferences/
+WARNING 2026-03-24 15:18:24,746 log "GET /api/customers/me/notification-preferences/ HTTP/1.1" 404 179
+INFO 2026-03-24 15:18:24,757 log "OPTIONS /api/customers/me/preferences/ HTTP/1.1" 200 0
+WARNING 2026-03-24 15:18:24,797 log Not Found: /api/customers/me/preferences/
+WARNING 2026-03-24 15:18:24,826 log "GET /api/customers/me/preferences/ HTTP/1.1" 404 179
+INFO 2026-03-24 15:18:24,852 log "OPTIONS /api/profile/notification-preferences/ HTTP/1.1" 200 0
+WARNING 2026-03-24 15:18:24,867 log Not Found: /api/profile/notification-preferences/
+WARNING 2026-03-24 15:18:24,868 log "GET /api/profile/notification-preferences/ HTTP/1.1" 404 179
+INFO 2026-03-24 15:18:24,880 log "OPTIONS /api/profile/preferences/ HTTP/1.1" 200 0
+WARNING 2026-03-24 15:18:24,891 log Not Found: /api/profile/preferences/
+WARNING 2026-03-24 15:18:24,941 log "GET /api/profile/preferences/ HTTP/1.1" 404 179
+INFO 2026-03-24 15:18:27,820 log "GET /api/auth/me/ HTTP/1.1" 200 296
+WARNING 2026-03-24 15:18:28,016 log Not Found: /api/customers/me/profile/
+WARNING 2026-03-24 15:18:28,069 log "GET /api/customers/me/profile/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,081 log Not Found: /api/customers/me/profile/
+WARNING 2026-03-24 15:18:28,100 log Not Found: /api/profile/settings/
+WARNING 2026-03-24 15:18:28,121 log "GET /api/profile/settings/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,119 log "GET /api/customers/me/profile/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,137 log Not Found: /api/profile/settings/
+WARNING 2026-03-24 15:18:28,140 log Not Found: /api/profile/
+WARNING 2026-03-24 15:18:28,146 log "GET /api/profile/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,146 log "GET /api/profile/settings/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,160 log Not Found: /api/profile/
+WARNING 2026-03-24 15:18:28,170 log "GET /api/profile/ HTTP/1.1" 404 179
+INFO 2026-03-24 15:18:28,200 log "GET /api/customers/me/ HTTP/1.1" 200 567
+WARNING 2026-03-24 15:18:28,250 log Not Found: /api/customers/me/notification-preferences/
+WARNING 2026-03-24 15:18:28,252 log "GET /api/customers/me/notification-preferences/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,268 log Not Found: /api/customers/me/preferences/
+INFO 2026-03-24 15:18:28,270 log "GET /api/customers/me/ HTTP/1.1" 200 567
+WARNING 2026-03-24 15:18:28,270 log "GET /api/customers/me/preferences/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,287 log Not Found: /api/customers/me/notification-preferences/
+WARNING 2026-03-24 15:18:28,289 log Not Found: /api/profile/notification-preferences/
+WARNING 2026-03-24 15:18:28,291 log "GET /api/customers/me/notification-preferences/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,295 log "GET /api/profile/notification-preferences/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,309 log Not Found: /api/customers/me/preferences/
+WARNING 2026-03-24 15:18:28,311 log Not Found: /api/profile/preferences/
+WARNING 2026-03-24 15:18:28,313 log "GET /api/customers/me/preferences/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,313 log "GET /api/profile/preferences/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,327 log Not Found: /api/profile/notification-preferences/
+WARNING 2026-03-24 15:18:28,334 log "GET /api/profile/notification-preferences/ HTTP/1.1" 404 179
+WARNING 2026-03-24 15:18:28,362 log Not Found: /api/profile/preferences/
+WARNING 2026-03-24 15:18:28,371 log "GET /api/profile/preferences/ HTTP/1.1" 404 179
+INFO 2026-03-24 15:18:31,641 log "GET /api/orders/?page=1&page_size=100&ordering=-created_at HTTP/1.1" 200 52
+INFO 2026-03-24 15:18:31,666 log "GET /api/orders/?page=1&page_size=100&ordering=-created_at HTTP/1.1" 200 52

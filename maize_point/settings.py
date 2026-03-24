@@ -29,7 +29,12 @@ SECRET_KEY = config(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG", default=False, cast=bool)
+_raw_debug = str(config("DEBUG", default="False")).strip().lower()
+if _raw_debug in {"1", "true", "t", "yes", "y", "on", "debug", "dev", "development"}:
+    DEBUG = True
+else:
+    # Treat values like "release", "prod", empty, and unknown values as False.
+    DEBUG = False
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*", cast=Csv())
 
@@ -173,7 +178,7 @@ REST_FRAMEWORK = {
         "rest_framework.filters.OrderingFilter",
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
-    "EXCEPTION_HANDLER": "rest_framework.views.exception_handler",
+    "EXCEPTION_HANDLER": "maize_point.exceptions.custom_exception_handler",
 }
 
 # JWT Configuration
@@ -200,7 +205,7 @@ SIMPLE_JWT = {
 # CORS Configuration
 CORS_ALLOWED_ORIGINS = config(
     "CORS_ALLOWED_ORIGINS",
-    default="http://localhost:3000,http://localhost:5173",
+    default="http://localhost:3000,http://localhost:3001,http://localhost:5173",
     cast=Csv(),
 )
 CORS_ALLOW_CREDENTIALS = True

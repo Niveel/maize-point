@@ -3,6 +3,7 @@ from django.urls import path
 from .views import (
     AnnouncementPreviewView,
     BenefitSectionListView,
+    DashboardOverviewView,
     FooterContactView,
     HeroMetricView,
     HomepageProductPreviewView,
@@ -12,6 +13,7 @@ from .views import (
 app_name = "homepage"
 
 urlpatterns = [
+    path("dashboard/", DashboardOverviewView.as_view(), name="dashboard_overview"),
     path("products-preview/", HomepageProductPreviewView.as_view(), name="products_preview"),
     path(
         "announcements-preview/",

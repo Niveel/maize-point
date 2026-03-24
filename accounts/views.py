@@ -1,13 +1,16 @@
 from rest_framework import status, generics, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.parsers import FormParser, JSONParser, MultiPartParser
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django.contrib.auth import get_user_model
 from .serializers import (
-    RegisterSerializer, LoginSerializer, UserSerializer,
-    ChangePasswordSerializer, ProfileUpdateSerializer
+    RegisterSerializer, UsernameOrEmailTokenObtainPairSerializer, UserSerializer,
+    ChangePasswordSerializer, ProfileContractSerializer, ProfileContractUpdateSerializer,
+    NotificationPreferenceSerializer, ProfilePictureUpdateSerializer
 )
+from .models import NotificationPreference
 
 User = get_user_model()
 
@@ -39,6 +42,7 @@ class RegisterView(generics.CreateAPIView):
 class LoginView(TokenObtainPairView):
     """API endpoint for user login"""
     permission_classes = [permissions.AllowAny]
+    serializer_class = UsernameOrEmailTokenObtainPairSerializer
 
 
 class LogoutView(APIView):
@@ -59,21 +63,22 @@ class LogoutView(APIView):
 class ProfileView(generics.RetrieveUpdateAPIView):
     """API endpoint for viewing and updating user profile"""
     permission_classes = [permissions.IsAuthenticated]
-    serializer_class = UserSerializer
+    serializer_class = ProfileContractSerializer
+    parser_classes = [JSONParser, MultiPartParser, FormParser]
     
     def get_object(self):
         return self.request.user
     
     def update(self, request, *args, **kwargs):
-        serializer = ProfileUpdateSerializer(
+        serializer = ProfileContractUpdateSerializer(
             instance=request.user,
             data=request.data,
             partial=True,
             context={'request': request}
         )
         serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response(UserSerializer(request.user).data)
+        user = serializer.save()
+        return Response(ProfileContractSerializer(user, context={"request": request}).data)
 
 
 class ChangePasswordView(APIView):
@@ -88,3 +93,48 @@ class ChangePasswordView(APIView):
             user.save()
             return Response({'message': 'Password changed successfully.'}, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class NotificationPreferenceView(APIView):
+    """Read/update user notification preferences."""
+
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        preferences, _ = NotificationPreference.objects.get_or_create(user=request.user)
+        serializer = NotificationPreferenceSerializer(preferences)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def patch(self, request):
+        preferences, _ = NotificationPreference.objects.get_or_create(user=request.user)
+        serializer = NotificationPreferenceSerializer(
+            preferences, data=request.data, partial=True
+        )
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def put(self, request):
+        preferences, _ = NotificationPreference.objects.get_or_create(user=request.user)
+        serializer = NotificationPreferenceSerializer(preferences, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class ProfilePictureView(APIView):
+    """Upload/update authenticated user's profile picture."""
+
+    permission_classes = [permissions.IsAuthenticated]
+    parser_classes = [MultiPartParser, FormParser]
+
+    def patch(self, request):
+        serializer = ProfilePictureUpdateSerializer(
+            request.user, data=request.data, partial=True
+        )
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(
+            ProfileContractSerializer(request.user, context={"request": request}).data,
+            status=status.HTTP_200_OK,
+        )

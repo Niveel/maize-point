@@ -59,3 +59,24 @@ WARNING 2026-03-15 23:27:58,826 log Bad Request: /api/products/
 WARNING 2026-03-15 23:27:58,829 log Bad Request: /api/products/
 WARNING 2026-03-15 23:27:58,831 log Bad Request: /api/products/
 WARNING 2026-03-15 23:27:58,833 log Bad Request: /api/products/
+INFO 2026-03-24 13:42:19,809 log "GET /api/schema/ HTTP/1.1" 200 109058
+INFO 2026-03-24 13:42:19,970 log "OPTIONS /api/auth/register/ HTTP/1.1" 200 1139
+INFO 2026-03-24 13:54:31,215 log "OPTIONS /api/auth/register/ HTTP/1.1" 200 1139
+INFO 2026-03-24 13:56:15,885 log "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2026-03-24 13:56:19,513 signals Registration email sent to feboapong@gmail.com
+INFO 2026-03-24 13:56:19,525 signals Customer profile created for user feboapong@gmail.com
+INFO 2026-03-24 13:56:19,653 log "POST /api/auth/register/ HTTP/1.1" 201 959
+INFO 2026-03-24 13:56:20,931 log "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+INFO 2026-03-24 13:56:20,998 log "OPTIONS /api/auth/me/ HTTP/1.1" 200 0
+INFO 2026-03-24 13:56:21,153 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 13:56:21,178 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 13:59:03,183 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 13:59:08,570 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 13:59:08,713 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:05:28,500 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:05:28,655 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:07:29,752 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:07:29,766 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:08:51,600 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:08:51,616 log "GET /api/auth/me/ HTTP/1.1" 200 296
+INFO 2026-03-24 14:09:10,564 log "GET /api/auth/me/ HTTP/1.1" 200 296

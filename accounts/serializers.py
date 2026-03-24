@@ -1,7 +1,8 @@
 from rest_framework import serializers
 from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth import authenticate
-from .models import User
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from .models import NotificationPreference, User
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -74,21 +75,71 @@ class LoginSerializer(serializers.Serializer):
         return attrs
 
 
+class UsernameOrEmailTokenObtainPairSerializer(TokenObtainPairSerializer):
+    """JWT login serializer that accepts either username or email."""
+    username = serializers.CharField(required=False)
+    email = serializers.EmailField(required=False)
+    password = serializers.CharField(write_only=True, required=True)
+
+    def validate(self, attrs):
+        username = attrs.get("username")
+        email = attrs.get("email")
+
+        if not username and not email:
+            raise serializers.ValidationError(
+                {"detail": "Provide either username or email with password."}
+            )
+
+        # Support explicit `email` field login.
+        if email:
+            user = User.objects.filter(email__iexact=email).first()
+            attrs[self.username_field] = (
+                getattr(user, self.username_field) if user else email
+            )
+        else:
+            # Support legacy `username` field carrying either username or email.
+            user = User.objects.filter(email__iexact=username).first()
+            attrs[self.username_field] = (
+                getattr(user, self.username_field) if user else username
+            )
+
+        attrs.pop("email", None)
+        return super().validate(attrs)
+
+
 class ChangePasswordSerializer(serializers.Serializer):
     """Serializer for changing password"""
-    old_password = serializers.CharField(required=True, write_only=True)
+    current_password = serializers.CharField(required=False, write_only=True)
+    old_password = serializers.CharField(required=False, write_only=True)
     new_password = serializers.CharField(required=True, write_only=True, validators=[validate_password])
-    new_password2 = serializers.CharField(required=True, write_only=True)
+    confirm_new_password = serializers.CharField(required=False, write_only=True)
+    new_password2 = serializers.CharField(required=False, write_only=True)
     
     def validate(self, attrs):
-        if attrs['new_password'] != attrs['new_password2']:
-            raise serializers.ValidationError({"new_password": "Password fields didn't match."})
+        current_password = attrs.get("current_password") or attrs.get("old_password")
+        confirm_new_password = attrs.get("confirm_new_password") or attrs.get("new_password2")
+
+        if not current_password:
+            raise serializers.ValidationError(
+                {"current_password": "Current password is required."}
+            )
+        if not confirm_new_password:
+            raise serializers.ValidationError(
+                {"confirm_new_password": "Please confirm the new password."}
+            )
+        if attrs["new_password"] != confirm_new_password:
+            raise serializers.ValidationError(
+                {"confirm_new_password": "New password fields didn't match."}
+            )
+
+        attrs["current_password"] = current_password
+        attrs["confirm_new_password"] = confirm_new_password
         return attrs
     
-    def validate_old_password(self, value):
+    def validate_current_password(self, value):
         user = self.context['request'].user
         if not user.check_password(value):
-            raise serializers.ValidationError("Old password is incorrect.")
+            raise serializers.ValidationError("Current password is incorrect.")
         return value
 
 
@@ -105,3 +156,109 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
         if User.objects.exclude(pk=user.pk).filter(mobile_number=value).exists():
             raise serializers.ValidationError("This mobile number is already in use.")
         return value
+
+
+class ProfileContractSerializer(serializers.ModelSerializer):
+    """Profile read contract used by frontend profile settings."""
+
+    location = serializers.SerializerMethodField()
+    profile_picture_url = serializers.SerializerMethodField()
+
+    class Meta:
+        model = User
+        fields = [
+            "id",
+            "first_name",
+            "last_name",
+            "username",
+            "email",
+            "mobile_number",
+            "whatsapp_number",
+            "location",
+            "profile_picture",
+            "profile_picture_url",
+            "is_verified",
+            "is_active",
+            "user_type",
+        ]
+        read_only_fields = ["id", "is_verified", "is_active", "user_type", "profile_picture_url"]
+
+    def get_location(self, obj):
+        customer_profile = getattr(obj, "customer_profile", None)
+        if customer_profile is None:
+            return None
+        return customer_profile.location
+
+    def get_profile_picture_url(self, obj):
+        if not obj.profile_picture:
+            return None
+        request = self.context.get("request")
+        if request:
+            return request.build_absolute_uri(obj.profile_picture.url)
+        return obj.profile_picture.url
+
+
+class ProfileContractUpdateSerializer(serializers.ModelSerializer):
+    """Profile update contract for editable user settings fields."""
+
+    location = serializers.CharField(required=False, allow_blank=True, allow_null=True)
+
+    class Meta:
+        model = User
+        fields = [
+            "first_name",
+            "last_name",
+            "username",
+            "email",
+            "mobile_number",
+            "whatsapp_number",
+            "profile_picture",
+            "location",
+        ]
+
+    def validate_username(self, value):
+        user = self.context["request"].user
+        if User.objects.exclude(pk=user.pk).filter(username=value).exists():
+            raise serializers.ValidationError("This username is already in use.")
+        return value
+
+    def validate_mobile_number(self, value):
+        user = self.context["request"].user
+        if User.objects.exclude(pk=user.pk).filter(mobile_number=value).exists():
+            raise serializers.ValidationError("This mobile number is already in use.")
+        return value
+
+    def update(self, instance, validated_data):
+        location = validated_data.pop("location", None)
+        user = super().update(instance, validated_data)
+
+        if location is not None:
+            from customers.models import Customer
+
+            customer_profile, _ = Customer.objects.get_or_create(
+                user=user,
+                defaults={"location": location or ""},
+            )
+            customer_profile.location = location or ""
+            customer_profile.save(update_fields=["location", "updated_at"])
+
+        return user
+
+
+class NotificationPreferenceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NotificationPreference
+        fields = [
+            "order_updates",
+            "price_alerts",
+            "announcements",
+            "whatsapp_notifications",
+            "updated_at",
+        ]
+        read_only_fields = ["updated_at"]
+
+
+class ProfilePictureUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["profile_picture"]
